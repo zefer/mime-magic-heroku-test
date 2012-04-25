@@ -15,10 +15,12 @@ app.configure(function () {
 
 app.get('/', function(req, res) {
   mime.fileWrapper('./package.json', function(err, m) {
-    util.debug(err);
-    util.debug(m);
+    if(err) {
+      res.send('<h2>Error:</h2><pre>' + err + '</pre>');
+    } else {
+      res.send('<h2>It worked!</h2><pre>' + m + '</pre>');
+    }
   });
-  res.send('Done, check logs.');
 });
 
 app.listen(app.settings.port);

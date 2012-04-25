@@ -17,6 +17,7 @@ app.get('/', function(req, res) {
   mime.fileWrapper('./package.json', function(err, m) {
     if(err) {
       res.send('<h2>Error:</h2><pre>' + err + '</pre>');
+      throw(err);
     } else {
       res.send('<h2>It worked!</h2><pre>' + m + '</pre>');
     }

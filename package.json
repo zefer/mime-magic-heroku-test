@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "express": "~2.5.9",
-    "mime-magic": "git://github.com/zefer/mime-magic.git#heroku-debug"
+    "mime-magic": "git://github.com/SaltwaterC/mime-magic.git#experimental"
   },
   "devDependencies": {
   },
